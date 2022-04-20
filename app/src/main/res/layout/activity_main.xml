@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <view
+    <View
         android:id="@+id/v_result_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -15,6 +15,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_expression"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:text = "1111 * 22"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_calculator_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tl_keypad_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="end"
+        android:textSize="20sp"
+        android:textColor="@color/dark_gray"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"/>
 
     <TableLayout
         android:id="@+id/tl_keypad_layout"
@@ -255,13 +283,14 @@
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_calculator_result"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/rectangle_round100_stroke1"
+                android:background="@drawable/rectangle_round100_stroke1_sushi"
                 android:layout_margin="7dp"
                 android:text="@string/calculator_equal"
                 android:textSize="24sp"
-                android:textColor="@color/sushi"
+                android:textColor="@color/white"
                 android:onClick="clickedCalculatorResultButton"
                 android:stateListAnimator="@null"/>
         </TableRow>
