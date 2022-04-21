@@ -26,7 +26,6 @@
         android:gravity="end"
         android:textSize="30sp"
         android:textColor="@color/black"
-        android:text = "1111 * 22"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -79,10 +78,11 @@
                 android:text="@string/calculator_bracket"
                 android:textSize="24sp"
                 android:textColor="@color/sushi"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_remainder"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -90,10 +90,11 @@
                 android:text="@string/calculator_percent"
                 android:textSize="24sp"
                 android:textColor="@color/sushi"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_divider"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -101,13 +102,14 @@
                 android:text="@string/calculator_division"
                 android:textSize="24sp"
                 android:textColor="@color/sushi"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
         </TableRow>
 
         <TableRow
             android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_seven"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -115,10 +117,11 @@
                 android:text="@string/calculator_seven"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedClearButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_eight"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -126,10 +129,11 @@
                 android:text="@string/calculator_eight"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nine"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -137,10 +141,11 @@
                 android:text="@string/calculator_nine"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_multi"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -148,13 +153,14 @@
                 android:text="@string/calculator_multiply"
                 android:textSize="24sp"
                 android:textColor="@color/sushi"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
         </TableRow>
 
         <TableRow
             android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_four"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -162,10 +168,11 @@
                 android:text="@string/calculator_four"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedClearButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_five"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -173,10 +180,11 @@
                 android:text="@string/calculator_five"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_six"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -184,10 +192,11 @@
                 android:text="@string/calculator_six"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_minus"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -195,24 +204,27 @@
                 android:text="@string/calculator_subtract"
                 android:textSize="24sp"
                 android:textColor="@color/sushi"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
         </TableRow>
 
         <TableRow
             android:layout_weight="1">
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/rectangle_round100_stroke1"
-                android:layout_margin="7dp"
-                android:text="@string/calculator_one"
-                android:textSize="24sp"
-                android:textColor="@color/matterhorn"
-                android:onClick="clickedClearButton"
-                android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_one"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:background="@drawable/rectangle_round100_stroke1"
+                android:onClick="clickedButton"
+                android:stateListAnimator="@null"
+                android:text="@string/calculator_one"
+                android:textColor="@color/matterhorn"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_two"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -220,10 +232,11 @@
                 android:text="@string/calculator_two"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_three"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -231,10 +244,11 @@
                 android:text="@string/calculator_three"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_plus"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -242,25 +256,27 @@
                 android:text="@string/calculator_plus"
                 android:textSize="24sp"
                 android:textColor="@color/sushi"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
         </TableRow>
 
         <TableRow
             android:layout_weight="1">
+
             <ImageButton
                 android:id="@+id/btn_calculator_history"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/rectangle_round100_stroke1"
                 android:layout_margin="7dp"
-                android:textSize="24sp"
-                android:textColor="@color/matterhorn"
-                android:src="@drawable/ic_access_time"
+                android:background="@drawable/rectangle_round100_stroke1"
                 android:onClick="clickedCalculatorHistoryButton"
-                android:stateListAnimator="@null"/>
+                android:src="@drawable/ic_access_time"
+                android:stateListAnimator="@null"
+                android:textColor="@color/matterhorn"
+                android:textSize="24sp" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_zero"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/rectangle_round100_stroke1"
@@ -268,7 +284,7 @@
                 android:text="@string/calculator_zero"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
@@ -279,7 +295,7 @@
                 android:text="@string/calculator_point"
                 android:textSize="24sp"
                 android:textColor="@color/matterhorn"
-                android:onClick="clickedNumberButton"
+                android:onClick="clickedButton"
                 android:stateListAnimator="@null"/>
 
             <androidx.appcompat.widget.AppCompatButton
