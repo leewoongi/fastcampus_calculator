@@ -9,12 +9,15 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var expressionTextView: TextView
     private lateinit var resultTextView: TextView
+    private lateinit var historyLayout: View
+    private lateinit var historyLinearLayout: View
     private var isOperator = false
     private var hasOperator = false
 
@@ -28,6 +31,8 @@ class MainActivity : AppCompatActivity() {
     private fun initialized() {
         expressionTextView = findViewById(R.id.tv_expression)
         resultTextView = findViewById(R.id.tv_calculator_result)
+        historyLayout = findViewById(R.id.cl_historyLayout)
+        historyLinearLayout = findViewById(R.id.ll_historyLinearLayout)
     }
 
     fun clickedButton(view: View) {
@@ -120,7 +125,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickedCalculatorHistoryButton(view: View) {
+        historyLayout.isVisible = true
+        // 디비에서 모든 기록 가져오기
+        // 뷰에 모든 기록 할당 하기
 
+    }
+
+    fun clickedCloseHistoryButton(view: View) {
+        // 히스토리 레이아웃 만 삭제
+        historyLayout.isVisible = false
+    }
+
+    fun clickedClearHistoryButton(view: View) {
+        // 디비에 모든 기록 삭제
+        // 뷰에서 모든 기록 삭제
     }
 
     fun clickedCalculatorResultButton(view: View) {

@@ -21,4 +21,7 @@
     <string name="calculator_eight">8</string>
     <string name="calculator_nine">9</string>
 
+    <string name="close">닫기</string>
+    <string name="clear_calculate_history">계산 기록 삭제</string>
+
 </resources>
